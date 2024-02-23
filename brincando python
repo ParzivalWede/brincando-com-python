@@ -1,0 +1,27 @@
+import datetime
+
+print("=" * 18)
+print("Calculando a Idade")
+print("=" * 18)
+
+# Solicita os dados de entrada
+nome = input("Como se chama? ")
+ano = eval(input("Nasceu em que ano? "))
+mes = eval(input("Nasceu em que mês? "))
+dia = eval(input("Nasceu em que dia? "))
+
+# Obtém a data atual
+data_atual = datetime.date.today()
+ano_atual = data_atual.year
+mes_atual = data_atual.month
+dia_atual = data_atual.day
+
+# Calcula a diferença entre as datas
+data_nasc = datetime.date(ano, mes, dia)
+diferenca = data_atual - data_nasc
+
+# Calcula a idade em anos
+idade = diferenca.days // 365
+
+# Imprime o resultado
+print(f"O {nome} tem {idade} anos.")
